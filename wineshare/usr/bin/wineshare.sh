@@ -1,17 +1,7 @@
 #!/bin/bash
-WINEINIT="/opt/windows"
 WINELINK="$HOME/.wine"
 WINEMONO="/opt/windows/drive_c/windows/mono"
 
-#-------------------------------------------------
-#wine init
-#-------------------------------------------------
-if [ -d $WINEINIT ]; then
-	echo "dizin var"
-else
-	echo "dizin yok"
-	#WINEARCH=win64 WINEPREFIX=/opt/windows wineboot --init
-fi
 /usr/bin/winechown $USER /opt/windows
 
 #-------------wine extension----------------------

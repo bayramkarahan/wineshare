@@ -1,5 +1,10 @@
 #!/bin/sh
-chown root:root /usr/bin/winechown
-chmod 777 /usr/bin/winechown
-chmod a+s /usr/bin/winechown
+chown root:root /usr/bin/winechown || true
+chmod 777 /usr/bin/winechown || true
+chmod a+s /usr/bin/winechown || true
+
+systemctl daemon-reload || true
+
+systemctl enable wine-init.service || true
+#systemctl start wine-init.service || true
 
